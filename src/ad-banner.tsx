@@ -15,8 +15,17 @@ class AdBanner extends React.Component<IComponentIdProps, any> {
     render() {
       console.log(this.props);
       const content = this.state['data-content'];
-      if (content) {
-        return <img src={content}/>;
+      const width = this.state['data-width'];
+      const height = this.state['data-height'];
+      const orientation = this.state['data-orientation'];
+      let style = {};
+      if (orientation === 'vertical') {
+        style.transform = [{ rotate: '0deg'}];
+      } else if (orientation === 'horizontal') {
+        style.transform = [{ rotate: '90deg'}];
+      }
+      if (!manywho.utils.isNullOrUndefined(content)) {
+        return <img src={content} style={style}/>;
       } else {
         return <div>None</div>;
       }
