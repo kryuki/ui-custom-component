@@ -5,8 +5,8 @@ import { IManywho } from './interfaces';
 declare const manywho: IManywho;
 
 class CustomBasic extends React.Component {
-    render() {
-        return <div className="custom-basic">Basic Custom Component</div>;
+render() {
+        return <div className="custom-basic">Custom Component</div>;
     }
 }
 
