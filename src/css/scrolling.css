@@ -1,0 +1,13 @@
+.background {
+    width:100%;
+  }
+  
+  .banner {
+    width: 250px;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+  }
